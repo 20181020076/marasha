@@ -4,8 +4,10 @@ import Banner from "./components/Banner";
 import AnimateLay from "./components/AnimateLay";
 import Place from "./components/Place";
 import Whatsapp from "./components/Whatsapp";
-import { Custom } from "./components/Icons";
+
 import { Roboto } from "next/font/google";
+import Contact from "./components/Contact";
+import Mision from "./components/Mision";
 const roboto = Roboto({
   weight: "700",
   subsets: ["latin"]
@@ -20,7 +22,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center items-center w-full text-center mt-3">
         <div className="w-[282px] ">
-        <h2  className={`uppercase bold ${roboto.className} text-[21px]`}> nosotros</h2>
+        <h2  className={`uppercase font-bold ${roboto.className} text-[21px]`}> nosotros</h2>
         <p className={`text-[12px]`}>
           Kubikando sas es una empresa con 19 años de trayectoria que esta en
           constante busqueda de la perfección. Desarrollando proyectos de alto
@@ -38,11 +40,15 @@ export default function Home() {
       <div className=" w-full ">
         <Place />
       </div>
-      <div className="w-full h-[200px] border border-black">
-        <Custom />
+      <div className="w-full border border-black">
+        <Mision/>
       </div>
+      <div className="w-full ">
+        <Contact/>
+      </div>
+      
 
-      <Whatsapp />
+      <Whatsapp/>
     </div>
   );
 }

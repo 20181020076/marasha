@@ -21,7 +21,7 @@ const Card = ({side,selectedId,setSelectedId, apto, layoutId,index}) => {
               <span className='uppercase text-[10px]'>apartamento</span>
               <h3 className={`uppercase text-center font-bold ${roboto.className} tracking-[0.1em]`}>Tipo 6</h3>
             </motion.div>
-            <motion.button className=' w-[60px] rounded-full border border-black text-[10px] px-2' onClick={() => setSelectedId(apto.id)}>ver mas</motion.button>
+            <motion.button className=' w-[60px] rounded-full border border-black text-[10px] px-2' onClick={() => setSelectedId(apto.id)}>ver más</motion.button>
           </motion.div>
 
         </motion.div>

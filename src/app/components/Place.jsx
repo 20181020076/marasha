@@ -1,11 +1,34 @@
-import React from "react";
+"use client";
+import React, {useEffect, useState} from "react";
 
 const Place = () => {
+  const [scrollValue, setScrollValue] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollValue(window.scrollY);
+
+    });
+    return ()=> {
+      window.removeEventListener('scroll')
+    }
+  }, []);
   return (
-    <div>
+    <div className="relative">
+      {/* bloque flotante */}
+      <div style={{top:`${scrollValue<1270?100:(scrollValue-1140)*1.2}px`}} className="w-[100px] h-[100px] bg-secundary absolute -z-10 right-10">
+
+      </div>
+      {/*  */}
       <div className="flex w-full h-[75px] bg-primary items-center justify-center text-white">
         <h2 className="text-3xl">
-          <span style={{"-webkit-text-stroke": "0.4px white"}} className="text-3xl  text-primary">EXCELENTE</span> UBICACION
+          <span
+            style={{ "-webkitTextStroke": "0.4px white" }}
+            className="text-3xl  text-primary"
+          >
+            EXCELENTE
+          </span>{" "}
+          UBICACION
         </h2>
       </div>
       <div className="w-full h-[25px]">

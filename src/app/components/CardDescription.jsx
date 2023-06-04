@@ -6,7 +6,7 @@ const CardDescription = ({ selectedId, setSelectedId }) => {
   
   return (
     
-    <motion.div layoutId={selectedId} className="fixed top-0 w-full h-screen  flex justify-center items-center z-50 ">
+    <div layoutId={selectedId} className="fixed top-0 w-full h-screen  flex justify-center items-center z-50 ">
       <motion.div className="relative w-full h-full flex flex-col items-center justify-center">
         <motion.div
           onClick={() => setSelectedId(null)}
@@ -17,10 +17,10 @@ const CardDescription = ({ selectedId, setSelectedId }) => {
           className="w-[90%] h-[90%] bg-purple border border-red-200 z-20 bg-white flex items-center rounded-xl overflow-y-auto relative  xs:flex-col"
         >
           {/* image */}
-          <motion.div className=" w-[90%]  bg-primary mt-3 mb-6 rounded-2xl relative  object-fill">
+          <motion.div className=" w-[90%]  bg-primary mt-3 mb-6  relative rounded-[14px]">
             <motion.img
               src={apartaments.find((apto) => apto.id === selectedId).image}
-              className="w-full "
+              className="w-full rounded-[14px]"
             />
 
             {/* iconos */}
@@ -53,7 +53,7 @@ const CardDescription = ({ selectedId, setSelectedId }) => {
           </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
