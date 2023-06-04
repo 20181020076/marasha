@@ -8,7 +8,7 @@ const roboto = Roboto({
 
 const Mision = () => {
   return (
-    <div className={`flex flex-col w-full relative z-0 py-10`}>
+    <div className={`flex flex-col w-full relative z-10 py-10`}>
       {/* Mision */}
       <div className="flex flex-col  justify-center items-center">
         <div className="flex w-full h-10 items-center justify-center gap-2 relative">

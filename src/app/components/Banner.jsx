@@ -20,7 +20,7 @@ const Banner = () => {
   
   return (
     <div className='w-full h-full flex items-end relative mb-7'>
-        <motion.div style={{top: `${scrollValue>923? 923*1.3:scrollValue*1.3}px`}} className={` w-[75px] h-[75px] absolute left-2 bg-secundary -z-10`}>
+        <motion.div style={{transform: `translate(0px,${scrollValue>923? 923*1.3:scrollValue*1.3}px)`}} className={` w-[75px] h-[75px] absolute top-0 left-2 bg-secundary -z-10`}>
             
         </motion.div>
         <div className='flex w-[85%] h-[90%] bg-primary z-10 overflow-hidden'>

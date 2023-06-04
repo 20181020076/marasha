@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, {useState, useEffect} from "react";
 import {
   FacebookIcon,
   WhatsAppIcon2,
@@ -7,8 +8,22 @@ import {
 } from "./Icons";
 
 const Contact = () => {
+  const [scrollValue, setScrollValue] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollValue(window.scrollY);
+
+    });
+    return ()=> {
+      window.removeEventListener('scroll')
+    }
+  }, []);
   return (
     <div className="h-[50vh] w-full relative z-0">
+      {/* caja flotante */}
+      <div style={{transform:`translate(0px,${scrollValue<1370?0:(Math.pow(scrollValue-1370,1.005))*-1}px)`}} className="w-[60px] h-[50px] absolute top-0 left-5 bg-secundary -z-50"></div>
+      
       <div className="flex justify-center items-center w-full  overflow-hidden">
         <img src="/Fondo_Contacto.png" alt="" className="w-full h-full" />
       </div>

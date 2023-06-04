@@ -15,15 +15,15 @@ const Place = () => {
   }, []);
   return (
     <div className="relative">
-      {/* bloque flotante */}
-      <div style={{top:`${scrollValue<1270?100:(scrollValue-1140)*1.2}px`}} className="w-[100px] h-[100px] bg-secundary absolute -z-10 right-10">
+      {/* bloque flotante ${scrollValue<1270?0:(scrollValue-1140)*1.2}*/}
+      <div style={{transform:`translate(0px,${scrollValue<1200?0:(Math.pow(scrollValue-1199,1.02))}px)`}} className="w-[100px] h-[100px] bg-secundary absolute -z-10 top-32 right-10">
 
       </div>
       {/*  */}
       <div className="flex w-full h-[75px] bg-primary items-center justify-center text-white">
         <h2 className="text-3xl">
           <span
-            style={{ "-webkitTextStroke": "0.4px white" }}
+            style={{ "WebkitTextStroke": "0.4px white" }}
             className="text-3xl  text-primary"
           >
             EXCELENTE
@@ -46,7 +46,7 @@ const Place = () => {
           </ul>
         </div>
         <div className="w-1/2 ">
-          <div className="w-[85%] ">
+          <div className="w-[100%] ">
             <img src="/1.png" alt="mapa" />
           </div>
           <div className="w-full h-[25px] bg-secundary"></div>
