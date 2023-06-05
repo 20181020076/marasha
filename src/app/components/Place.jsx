@@ -10,11 +10,14 @@ const Place = () => {
 
     });
     return ()=> {
-      window.removeEventListener('scroll')
+      window.removeEventListener('scroll',() => {
+        setScrollValue(window.scrollY);
+  
+      })
     }
   }, []);
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {/* bloque flotante ${scrollValue<1270?0:(scrollValue-1140)*1.2}*/}
       <div style={{transform:`translate(0px,${scrollValue<1200?0:(Math.pow(scrollValue-1199,1.02))}px)`}} className="w-[100px] h-[100px] bg-secundary absolute -z-10 top-32 right-10">
 
@@ -46,8 +49,8 @@ const Place = () => {
           </ul>
         </div>
         <div className="w-1/2 ">
-          <div className="w-[100%] ">
-            <img src="/1.png" alt="mapa" />
+          <div className="w-[100%] overflow-hidden">
+            <img src="/1.png" alt="mapa"  className="xs:max-w-[200px] xs:w-[170px] 2xl:rotate-90 2xl:w-[400px]"/>
           </div>
           <div className="w-full h-[25px] bg-secundary"></div>
         </div>

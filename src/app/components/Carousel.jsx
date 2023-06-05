@@ -16,13 +16,13 @@ const Carousel = () => {
       <div className="flex w-full h-full items-center overflow-hidden">
         <motion.img
           style={{ y: useTransform(scrollYProgress, [0, 1], ["0%", "50%"]) }}
-          className="h-full  "
+          className="xs:h-full  2xl:w-full 2xl:h-auto"
           src="/Foto_edificio.png"
-          alt="hol"
+          alt="banner"
         />
       </div>
 
-      <div className="flex w-full absolute bottom-3 gap-[6px]  justify-end pr-[23%]">
+      <div className="flex w-full absolute bottom-3 gap-[6px]  justify-end xs:pr-[23%] 2xl:pr-[38%]">
         {colors.map((color,index) => {
           return (
             <div

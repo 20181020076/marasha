@@ -10,10 +10,13 @@ const Banner = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollValue(window.scrollY);
-      console.log(window.scrollY)
+      
     });
     return ()=> {
-      window.removeEventListener('scroll')
+      window.removeEventListener('scroll',() => {
+        setScrollValue(window.scrollY);
+  
+      })
     }
   }, []);
 
@@ -26,7 +29,7 @@ const Banner = () => {
         <div className='flex w-[85%] h-[90%] bg-primary z-10 overflow-hidden'>
             <Carousel/>
         </div>
-        <motion.div style={{top: `${scrollValue*0.7}px`}}  className='flex items-center justify-center bg-primary  w-[15%] h-full  absolute  right-0 overflow-hidden'>
+        <motion.div style={{top: `${scrollValue*0.7}px`}}  className='flex items-center justify-center bg-primary  w-[15%] h-full  absolute  right-0 overflow-hidden z-0'>
           <img className='w-[85%]' src={"/logo-kubikando.svg"} alt='logo kubikando'/>
         </motion.div>
     </div>

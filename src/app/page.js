@@ -17,13 +17,13 @@ export default function Home() {
   return (
     <div className="w-full">
       <Navbar />
-      <div className="w-full h-[227px] border border-black ">
+      <div id="home" className="w-full h-[227px] border border-black 2xl:h-[600px] xs:h-[227px]">
         <Banner />
       </div>
-      <div className="flex flex-col justify-center items-center w-full text-center mt-3">
-        <div className="w-[282px] ">
-        <h2  className={`uppercase font-bold ${roboto.className} text-[21px]`}> nosotros</h2>
-        <p className={`text-[12px]`}>
+      <div id="nosotros" className="flex flex-col justify-center items-center w-full text-center mt-3 z-40">
+        <div className="xs:w-[282px] 2xl:w-[500px]">
+        <h2  className={`uppercase font-bold ${roboto.className} z-40 xs:text-[21px] 2xl:text-[35px] `}> nosotros</h2>
+        <p className={`z-40 xs:text-[12px] 2xl:text-[16px]`}>
           Kubikando sas es una empresa con 19 años de trayectoria que esta en
           constante busqueda de la perfección. Desarrollando proyectos de alto
           valor que son la personificación de la elegancia y la distinción. Nos
@@ -34,16 +34,16 @@ export default function Home() {
         
       </div>
 
-      <div className=" w-full ">
+      <div id="disponibles" className="flex justify-center items-center w-full ">
         <AnimateLay />
       </div>
-      <div className=" w-full ">
+      <div id="descripcion" className="flex justify-center items-center w-full ">
         <Place />
       </div>
-      <div className="w-full border border-black">
+      <div className="flex w-full justify-center items-center border border-black">
         <Mision/>
       </div>
-      <div className="w-full ">
+      <div id="contacto" className="w-full ">
         <Contact/>
       </div>
       

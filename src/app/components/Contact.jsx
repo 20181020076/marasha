@@ -16,16 +16,19 @@ const Contact = () => {
 
     });
     return ()=> {
-      window.removeEventListener('scroll')
+      window.removeEventListener('scroll',() => {
+        setScrollValue(window.scrollY);
+  
+      })
     }
   }, []);
   return (
-    <div className="h-[50vh] w-full relative z-0">
+    <div className=" w-full relative z-0 xs:h-[50vh] 2xl:h-[60vh]">
       {/* caja flotante */}
       <div style={{transform:`translate(0px,${scrollValue<1370?0:(Math.pow(scrollValue-1370,1.005))*-1}px)`}} className="w-[60px] h-[50px] absolute top-0 left-5 bg-secundary -z-50"></div>
       
-      <div className="flex justify-center items-center w-full  overflow-hidden">
-        <img src="/Fondo_Contacto.png" alt="" className="w-full h-full" />
+      <div className="flex justify-center items-center w-full h-full  overflow-hidden">
+        <img src="/Fondo_Contacto.png" alt="" className="w-full " />
       </div>
       <div className="flex flex-col w-full h-full text-white absolute top-0 left-0  justify-center items-center">
         <h3 className="text-[37px] z-50 uppercase text-secundary mb-3">Contacto</h3>
