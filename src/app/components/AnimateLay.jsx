@@ -7,7 +7,7 @@ import CardDescription from "./CardDescription";
 const AnimateLay = () => {
   const [selectedId, setSelectedId] = useState(null);
   return (
-    <div className="flex justify-center items-center my-5 w-full relative 2xl:gap-5 2xl:max-w-[1000px]" >
+    <div className="flex justify-center items-center my-5 w-full relative 2xl:gap-5 2xl:max-w-[1000px] 2xl:mb-[50px]" >
       <motion.div className="flex w-full justify-center items-center  flex-wrap xs:flex-col xs:gap-8 2xl:gap-10">
          {apartaments.map((apto, index) => {
         return (

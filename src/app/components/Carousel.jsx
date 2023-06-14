@@ -22,7 +22,7 @@ const Carousel = () => {
         />
       </div>
 
-      <div className="flex w-full absolute bottom-3 gap-[6px]  justify-end xs:pr-[23%] 2xl:pr-[38%]">
+      <div className="flex w-full absolute bottom-3 gap-[6px]  justify-end xs:pr-[27%] 2xl:pr-[38%]">
         {colors.map((color,index) => {
           return (
             <div
